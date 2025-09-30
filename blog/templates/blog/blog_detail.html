@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}{{ post.title }} — Hiba{% endblock %}
+
+{% block content %}
+<article>
+  <h2>{{ post.title }}</h2>
+  <p class="text-muted">{{ post.created_at|date:"F j, Y" }}</p>
+  <div>{{ post.content|linebreaks }}</div>
+</article>
+{% endblock %}
